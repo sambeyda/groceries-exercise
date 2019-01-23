@@ -40,3 +40,12 @@ for p in products:
 
 #for p in products:
     #print(p["department"])
+
+
+
+
+
+
+
+
+# TODO: write some Python code here to produce the desired output
