@@ -38,10 +38,10 @@ def sort_by_name(any_product):
     return any_product ["name"]
 sorted_products = sorted(products,key=sort_by_name)
  
-# for p in sorted_products:
-#     print(p["name"]
-#     price_usd = " (${0:.2f})".format(p["price"])
-#     print(" + " + p["name"] + price_usd)
+for p in sorted_products:
+    #print(p["name"]
+    price_usd = " (${0:.2f})".format(p["price"])
+    print(" + " + p["name"] + price_usd)
 
 #DEPARTMENT Part 2
 
@@ -67,31 +67,9 @@ unique_departments.sort()
 for d in unique_departments:
     matching_products= [p for p in products if p["department"] == d]
     matching_products_count = len(matching_products)
-    print(d.title() + " (" + str(matching_products_count) + " products)")
+    if matching_products_count > 1:
+        label = "products"
+    else:
+        label = "product"
+    print(" + " + d.title() + " (" + str(matching_products_count) + " " + label + ")")
 
-# --------------
-# THERE ARE 10 DEPARTMENTS:
-# --------------
-#  + Babies (1 product) 
-#  + Beverages (5 products)
-#  + Dairy Eggs (1 product)
-#  + Dry Goods Pasta (1 product)
-#  + Frozen (4 products)
-#  + Household (1 product)
-#  + Meat Seafood (1 product)
-#  + Pantry (2 products)
-#  + Personal Care (2 products)
-#  + Snacks (2 products)
-
-
-
- # print (products[0]["name"])
-
-
-
-
-
-
-
-
-# TODO: write some Python code here to produce the desired output
