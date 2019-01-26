@@ -63,13 +63,16 @@ print("--------------")
 
 unique_departments.sort()
 
+
 for d in unique_departments:
-    print(d.title())
+    matching_products= [p for p in products if p["department"] == d]
+    matching_products_count = len(matching_products)
+    print(d.title() + " (" + str(matching_products_count) + " products)")
 
 # --------------
 # THERE ARE 10 DEPARTMENTS:
 # --------------
-#  + Babies (1 product)
+#  + Babies (1 product) 
 #  + Beverages (5 products)
 #  + Dairy Eggs (1 product)
 #  + Dry Goods Pasta (1 product)
